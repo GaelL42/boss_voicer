@@ -78,12 +78,12 @@ public class SolVoicerPlugin extends Plugin
 		int speakerLength;
 		if (text.startsWith("Sol Heredit: ")) {
 			speakerLength = 13;
-		} else if (text.startsWith("Minimus: ")) {
+		} else if (text.startsWith("Minimus: ") && config.includeMinimus()) {
 			speakerLength = 9;
 		} else {
 			return;
 		}
-		log.debug("About to try to play a Minimus or Sol sound from an overhead : " + text);
+		log.debug("About to try to play a sound from an overhead : " + text);
 		VoiceActing voiceAct = VoiceActing.forTriggerLine(text.substring(speakerLength));
 		if (voiceAct != null) {
 			playVoiceAct(voiceAct);
@@ -101,14 +101,15 @@ public class SolVoicerPlugin extends Plugin
 					return;
 				}
 				String npcName = npcNameWidget.getText();
-				if (npcName.equals("Sol Heredit") || npcName.equals("Minimus")) {
+				if (npcName.equals("Sol Heredit") ||
+						(npcName.equals("Minimus") && config.includeMinimus())) {
 					Widget textWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
 					if (textWidget == null || textWidget.getText() == null) {
 						log.error("NPC dialog textWidget or textWidget.getText() is null");
 						return;
 					}
 					String text = Text.sanitizeMultilineText(textWidget.getText());
-					log.debug("About to try to play a Minimus or Sol sound from the chatbox : " + text);
+					log.debug("About to try to play a sound from the chatbox : " + text);
 					VoiceActing voiceAct = VoiceActing.forTriggerLine(text);
 					if (voiceAct != null) {
 						playVoiceAct(voiceAct);
