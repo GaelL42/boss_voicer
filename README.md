@@ -9,7 +9,9 @@ Sol Heredit: You're back so soon? A lesser combatant would've retired in shame a
 Sol Heredit: But you're clearly different. Let's see what you have this time...  
 Sol Heredit: What is it they say? Third time's the charm? Let's see if that's true.  
 Sol Heredit: To arms!  
-Sol Heredit: You might be an incapable fighter, but at least you're persistent. Shall we?
+Sol Heredit: You might be an incapable fighter, but at least you're persistent. Shall we?  
+  
+Also has a singular voiceline for Minimus ("Welcome, Grand Champion.") for debugging purposes.
 # Overhead dialogue lines (can appear on every attempt) :
 Sol Heredit: Let's start by testing your footwork.  
 Sol Heredit: Not bad. Let's try something else...  
@@ -32,4 +34,6 @@ Sol Heredit: You almost had me excited for a moment.
 Sol Heredit: Your lack of coordination is concerning.  
 Sol Heredit: Your light shines no longer.  
 Sol Heredit: Maybe next time...  
-Sol Heredit: Pathetic, really...
+Sol Heredit: Pathetic, really...  
+  
+Also has some voicelines for Minimus when he greets you into the Colosseum.

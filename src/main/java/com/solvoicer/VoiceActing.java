@@ -69,9 +69,9 @@ public enum VoiceActing {
     public static VoiceActing forTriggerLine(String triggerLine) {
         if (triggerLine.equals("I'LL TWIST YOUR HANDS OFF!")) {
             Random rand = new Random();
-            int n = rand.nextInt(100);
-            if (n == 42) {
-                triggerLine = "I'LL TWIST YOUR D... OFF!"; // hehe
+            int n = rand.nextInt(10);
+            if (n == 9) {
+                triggerLine = "I'LL TWIST YOUR D... OFF!"; // hehe...
             }
         }
         return triggerLines.get(triggerLine);

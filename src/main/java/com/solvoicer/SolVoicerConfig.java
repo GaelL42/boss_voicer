@@ -23,8 +23,7 @@ public interface SolVoicerConfig extends Config
 	@ConfigItem(
 			keyName = "includeMinimus",
 			name = "Include Minimus",
-			description = "Whether or not Minimus's text should also be voiced."
-			//position = 1
+			description = "Whether or not some of Minimus's lines should also be voiced."
 	)
 	default boolean includeMinimus() { return false; }
 }

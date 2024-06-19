@@ -30,6 +30,11 @@ import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
 
+// As a full disclosure, the logic of this plugin is mostly ripped off from Nex Nostalgia by hex-agon,
+// with the Dialogue Widget logic ripped off from phyce's Natural Speech plugin.
+// But at least I recorded the voice files, so there's that!
+// - Gael L
+
 @Slf4j
 @PluginDescriptor(
 	name = "Sol Voicer"
