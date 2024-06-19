@@ -6,7 +6,7 @@ import java.util.Random;
 
 public enum VoiceActing {
 
-    // Chatbox text (Minimus + Sol Heredit)
+    // Chatbox text
     WELCOME_GRAND_CHAMPION("Welcome, Grand Champion.", "chatbox/welcome_grand_champion.wav"),
     WORTHY_CHALLENGER("By Ralos, we finally have a worthy challenger.", "chatbox/worthy_challenger.wav"),
     ALMOST_IMPRESSED("You've torn through multiple waves of combatants and you're still standing. I'm almost impressed.", "chatbox/almost_impressed.wav"),
@@ -17,7 +17,15 @@ public enum VoiceActing {
     TO_ARMS("To arms!","chatbox/to_arms.wav"),
     INCAPABLE_FIGHTER("You might be an incapable fighter, but at least you're persistent. Shall we?,","chatbox/incapable_fighter.wav"),
 
-    // Overhead text (Sol Heredit)
+    // Overhead text
+    ROOKIE("A Rookie approaches!","overhead/rookie.wav"),
+    BRAWLER("A Brawler approaches!","overhead/brawler.wav"),
+    CHALLENGER("A Challenger approaches!","overhead/challenger.wav"),
+    GLADIATOR("A Gladiator approaches!","overhead/gladiator.wav"),
+    HERO("A Hero approaches!","overhead/hero.wav"),
+    CHAMPION("A Champion approaches!","overhead/champion.wav"),
+    GRAND_CHAMPION("A Grand Champion approaches!","overhead/grand_champion.wav"),
+    LET_ME_KNOW("Let me know when you want to begin.","overhead/let_me_know.wav"),
     FOOTWORK("Let's start by testing your footwork.","overhead/testing_your_footwork.wav"),
     SOMETHING_ELSE("Not bad. Let's try something else...","overhead/try_something_else.wav"),
     HANDLE_THIS("Impressive. Let's see how you handle this...","overhead/see_how_you_handle_this.wav"),

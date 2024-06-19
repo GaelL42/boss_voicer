@@ -76,11 +76,15 @@ public class SolVoicerPlugin extends Plugin
 		}
 		String text = Text.removeTags(event.getMessage());
 		int speakerLength;
-		if (!text.startsWith("Sol Heredit: ")) {
+		if (text.startsWith("Sol Heredit: ")) {
+			speakerLength = 13;
+		} else if (text.startsWith("Minimus: ")) {
+			speakerLength = 9;
+		} else {
 			return;
 		}
-		log.debug("About to try to play a Sol sound from an overhead : " + text);
-		VoiceActing voiceAct = VoiceActing.forTriggerLine(text.substring(13));
+		log.debug("About to try to play a Minimus or Sol sound from an overhead : " + text);
+		VoiceActing voiceAct = VoiceActing.forTriggerLine(text.substring(speakerLength));
 		if (voiceAct != null) {
 			playVoiceAct(voiceAct);
 		}
