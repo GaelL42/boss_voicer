@@ -1,13 +1,13 @@
-package com.solvoicer;
+package com.bossvoicer;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class SolVoicerPluginTest
+public class BossVoicerPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(SolVoicerPlugin.class);
+		ExternalPluginManager.loadBuiltin(BossVoicerPlugin.class);
 		RuneLite.main(args);
 	}
 }
