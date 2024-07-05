@@ -54,4 +54,25 @@ public interface BossVoicerConfig extends Config
 			description = "Whether or not some of Minimus's lines should be voiced (mostly for debugging purposes)."
 	)
 	default boolean includeMinimus() { return false; }
+
+	@ConfigItem(
+			keyName = "includeBarrows",
+			name = "Barrows Brothers",
+			description = "Whether or not the Barrows Brothers should be voiced (only 2 lines)."
+	)
+	default boolean includeBarrows() { return true; }
+
+	@ConfigItem(
+			keyName = "includeOrators",
+			name = "Vyre Orators",
+			description = "Whether or not the Vyre Orators should be voiced."
+	)
+	default boolean includeOrators() { return false; }
+
+	@ConfigItem(
+			keyName = "includeVerzik",
+			name = "Verzik Vitur",
+			description = "Whether or not Lazy Verzik Vitur should be voiced."
+	)
+	default boolean includeVerzik() { return true; }
 }

@@ -1,7 +1,18 @@
 # Boss Voicer
 Provides Voice Acting for the overhead & chatbox dialogues of the following bosses :   
--Sol Heredit  
+-Sol Heredit & Minimus  
 -General Graardor  
+-K'ril Tsutsaroth  
+-Vet'ion & Calvar'ion  
+-The Barrows Brothers  
+-Verzik Vitur & her Vyre Orators  
+  
+Due to their unreasonable speed of dialogue, the following bosses have not been voiced :  
+-Chaos Fanatic (talks every 2 ticks)  
+-Crazy Archaeologist (talks every 3 ticks)  
+-Deranged Archaeologist (talks every 3 ticks)  
+
+I have also not voiced Commander Zilyana due to her high pitch.  
   
 The dialogue lines voiced are as follows...  
 
@@ -30,6 +41,7 @@ Attack!
 The Dark One will have their souls!  
 No retreat!  
 YARRRRRRR!  
+(Death Noise)  
 
 # Vet'ion & Calvar'ion Overhead dialogue :  
 Die!  
@@ -73,6 +85,29 @@ This isn't... the last... of me...
 My lord... I'm... sorry...  
 I'll get you... next... time...  
 
+# Barrows Brothers Overhead dialogue :  
+You dare disturb my rest!  
+You dare steal from us!  
+
+# Verzik Vitur & Vyre Orators dialogue :  
+Welcome, one and all, to the Theatre of Blood.  
+Verzik Vitur cordially invites you to the Theatre.  
+Glory awaits those who enter the Theatre!  
+Prove your worth in the Theatre!  
+Only the Theatre can free you!  
+You must stay and fight!  
+Now that was quite the show! I haven't been that entertained in a long time.  
+Of course, you know I can't let you leave here alive. Time for your final performance...  
+Back again for more? I admire your perseverance. Shall we begin?  
+Oh I'm going to enjoy this...  
+You think you can defeat me?  
+There's nothing for you there!  
+There's nothing under there for you!  
+Behold my true nature!  
+I'm not finished with you just yet!  
+You think this is over?  
+(Death Noise)  
+
 # Sol Heredit Chatbox dialogue lines (can only appear before your 1st kc) :
 By Ralos, we finally have a worthy challenger.  
 You've torn through multiple waves of combatants and you're still standing. I'm almost impressed.  
@@ -109,4 +144,6 @@ Your light shines no longer.
 Maybe next time...  
 Pathetic, really...  
   
-Also has some voicelines for Minimus when he greets you into the Colosseum.
+Also has some voicelines for Minimus when he greets you into the Colosseum.  
+
+And that's it!

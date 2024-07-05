@@ -11,19 +11,13 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.util.Text;
 import javax.inject.Inject;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.*;
 import javax.sound.sampled.FloatControl.Type;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Timer;
+import java.util.*;
+
 import net.runelite.api.widgets.ComponentID;
 import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.Widget;
@@ -45,6 +39,7 @@ public class BossVoicerPlugin extends Plugin {
 
 	Timer timer = new Timer();
 
+	// Basic common functions
 	@Override
 	protected void startUp() throws Exception {
 		log.info("Boss Voicer started!");
@@ -56,13 +51,12 @@ public class BossVoicerPlugin extends Plugin {
 	protected void shutDown() throws Exception {
 		unloadVoiceActs();
 	}
-
 	@Provides
 	BossVoicerConfig provideConfig(ConfigManager configManager) {
 		return configManager.getConfig(BossVoicerConfig.class);
 	}
 
-	// Chatbox Dialogue Logic (pretty much just for your 1st kc at Sol)
+	// Chatbox Dialogue Logic
 	@Subscribe(priority=-100)
 	private void onWidgetLoaded(WidgetLoaded event) {
 		if (event.getGroupId() == InterfaceID.DIALOG_NPC) {
@@ -75,7 +69,9 @@ public class BossVoicerPlugin extends Plugin {
 				}
 				String npcName = npcNameWidget.getText();
 				if ((npcName.equals("Sol Heredit") && config.includeSol())
-						|| (npcName.equals("Minimus") && config.includeMinimus())) {
+						|| (npcName.equals("Minimus") && config.includeMinimus())
+						|| (npcName.equals("Vyre Orator") && config.includeOrators())
+						|| (npcName.equals("Verzik Vitur") && config.includeVerzik())) {
 					Widget textWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
 					if (textWidget == null || textWidget.getText() == null) {
 						log.error("NPC dialog textWidget or textWidget.getText() is null");
@@ -85,7 +81,7 @@ public class BossVoicerPlugin extends Plugin {
 					log.debug("About to try to play a sound from the chatbox : " + text);
 					VoiceActing voiceAct = VoiceActing.forTriggerLine(text);
 					if (voiceAct != null) {
-						playVoiceAct(voiceAct);
+						playVoiceAct(npcName, voiceAct);
 					}
 				}
 			});
@@ -98,16 +94,31 @@ public class BossVoicerPlugin extends Plugin {
 		if (event.getActor() != null && event.getActor().getName() != null && event.getOverheadText() != null) {
 			String actorName = event.getActor().getName();
 			if ((actorName.equals("General Graardor") && config.includeGraardor())
-			|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
-			|| (actorName.equals("Vet'ion") && config.includeVetion())
-			|| (actorName.equals("Calvar'ion") && config.includeVetion())
-			|| (actorName.equals("Sol Heredit") && config.includeSol())
-			|| (actorName.equals("Minimus") && config.includeMinimus())) {
+					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
+					|| (actorName.equals("Vet'ion") && config.includeVetion())
+					|| (actorName.equals("Calvar'ion") && config.includeVetion())
+					|| (actorName.equals("Minimus") && config.includeMinimus())
+					|| (actorName.equals("Sol Heredit") && config.includeSol())
+					|| (actorName.equals("Vyre Orator") && config.includeOrators())
+					|| (actorName.equals("Verzik Vitur") && config.includeVerzik())
+					|| (actorName.equals("Ahrim the Blighted") && config.includeBarrows())
+					|| (actorName.equals("Dharok the Wretched") && config.includeBarrows())
+					|| (actorName.equals("Guthan the Infested") && config.includeBarrows())
+					|| (actorName.equals("Karil the Tainted") && config.includeBarrows())
+					|| (actorName.equals("Torag the Corrupted") && config.includeBarrows())
+					|| (actorName.equals("Verac the Defiled") && config.includeBarrows())) {
 				String text = Text.removeTags(event.getOverheadText());
 				log.debug("About to try to play a sound from an overhead : " + text);
 				VoiceActing voiceAct = VoiceActing.forTriggerLine(text);
-				if (voiceAct != null) {
-					playVoiceAct(voiceAct);
+				if (voiceAct == null) {
+					if (actorName.equals("Vet'ion") || actorName.equals("Calvar'ion")) {
+						voiceAct = VoiceActing.forTriggerLine(text.toUpperCase());
+						if (voiceAct != null) {
+							playVoiceAct(actorName, voiceAct);
+						}
+					}
+				} else {
+					playVoiceAct(actorName, voiceAct);
 				}
 			}
 		}
@@ -119,18 +130,20 @@ public class BossVoicerPlugin extends Plugin {
 		if (event != null && event.getActor() != null) {
 			String actorName = event.getActor().getName();
 			if ((actorName.equals("General Graardor") && config.includeGraardor())
-			|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())) {
+					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
+					|| (actorName.equals("Verzik Vitur") && config.includeVerzik())) {
 				log.debug("About to try to play a sound from a death");
 				VoiceActing voiceAct = VoiceActing.forTriggerLine(actorName + " Death");
 				if (voiceAct != null) {
-					playVoiceAct(voiceAct);
+					playVoiceAct(actorName, voiceAct);
 				}
 			}
 		}
 	}
 
-	// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
+	// Volume Adjustment Logic
 	@Subscribe
 	public void onConfigChanged(ConfigChanged event) {
 		if (event.getGroup().equals(BossVoicerConfig.GROUP)) {
@@ -138,7 +151,14 @@ public class BossVoicerPlugin extends Plugin {
 			updateVolumeGain(config.volumeGain());
 		}
 	}
+	private void updateVolumeGain(float decibels) {
+		for (Clip clip : voiceActingClips.values()) {
+			FloatControl control = (FloatControl) clip.getControl(Type.MASTER_GAIN);
+			control.setValue(decibels);
+		}
+	}
 
+	// Voice Loading & Unloading Logic
 	private void loadVoiceActs() {
 		for (VoiceActing voiceAct : VoiceActing.values()) {
 			try {
@@ -170,19 +190,23 @@ public class BossVoicerPlugin extends Plugin {
 		}
 	}
 
-	private void updateVolumeGain(float decibels) {
+	// Voice Playing Logic
+	private boolean isAnyClipRunning() {
 		for (Clip clip : voiceActingClips.values()) {
-			FloatControl control = (FloatControl) clip.getControl(Type.MASTER_GAIN);
-			control.setValue(decibels);
+			if (clip != null && clip.isRunning()) return true;
 		}
+		return false;
 	}
-
-	private void playVoiceAct(VoiceActing voiceAct) {
-		Clip clip = voiceActingClips.get(voiceAct);
-		if (clip == null) {
-			log.warn("Voice clip '{}' is not loaded.", voiceAct);
+	private void playVoiceAct(String actorName, VoiceActing voiceAct) {
+		if (actorName.equals("Vyre Orator") && isAnyClipRunning()) {
+			log.debug("Preventing the 2 Vyre Orators from talking over each other.");
 		} else {
-			playSound(clip);
+			Clip clip = voiceActingClips.get(voiceAct);
+			if (clip == null) {
+				log.warn("Voice clip '{}' is not loaded.", voiceAct);
+			} else {
+				playSound(clip);
+			}
 		}
 	}
 	private void playSound(Clip audioClip) {
