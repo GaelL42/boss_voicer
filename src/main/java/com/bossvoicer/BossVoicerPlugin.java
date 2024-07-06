@@ -98,7 +98,6 @@ public class BossVoicerPlugin extends Plugin {
 					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
 					|| (actorName.equals("Vet'ion") && config.includeVetion())
 					|| (actorName.equals("Calvar'ion") && config.includeVetion())
-					|| (actorName.equals("Minimus") && config.includeMinimus())
 					|| (actorName.equals("Sol Heredit") && config.includeSol())
 					|| (actorName.equals("Verzik Vitur") && config.includeVerzik())
 					|| (actorName.equals("Ahrim the Blighted") && config.includeBarrows())
@@ -134,7 +133,7 @@ public class BossVoicerPlugin extends Plugin {
 	// Death Sounds Logic, for bosses whose deaths feel a little bit lacking!
 	@Subscribe
 	public void onActorDeath(ActorDeath event) {
-		if (event != null && event.getActor() != null) {
+		if (event != null && event.getActor() != null && event.getActor().getName() != null) {
 			String actorName = event.getActor().getName();
 			int actorLevel = event.getActor().getCombatLevel();
 			if ((actorName.equals("General Graardor") && config.includeGraardor())
@@ -200,26 +199,16 @@ public class BossVoicerPlugin extends Plugin {
 	}
 
 	// Voice Playing Logic
-	private boolean isAnyClipRunning() {
-		for (Clip clip : voiceActingClips.values()) {
-			if (clip != null && clip.isRunning()) return true;
-		}
-		return false;
-	}
 	private void playVoiceAct(String actorName, VoiceActing voiceAct) {
-		if (actorName.equals("Vyre Orator") && isAnyClipRunning()) {
-			log.debug("Preventing the 2nd Vyre Orator from talking over the 1st one.");
+		if (previousClip != null && previousClip.isRunning())
+			previousClip.stop();
+		Clip clip = voiceActingClips.get(voiceAct);
+		if (clip == null) {
+			log.warn("Voice clip '{}' is not loaded.", voiceAct);
 		} else {
-			if (previousClip != null && previousClip.isRunning())
-				previousClip.stop();
-			Clip clip = voiceActingClips.get(voiceAct);
-			if (clip == null) {
-				log.warn("Voice clip '{}' is not loaded.", voiceAct);
-			} else {
-				clip.setFramePosition(0);
-				clip.loop(0);
-				previousClip = clip;
-			}
+			clip.setFramePosition(0);
+			clip.loop(0);
+			previousClip = clip;
 		}
 	}
 }

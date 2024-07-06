@@ -92,14 +92,6 @@ public enum VoiceActing {
     VERZIK_DEATH("Verzik Vitur Death", "tob/death.wav"),
 
     // Minimus & Sol Heredit text
-    ROOKIE("A Rookie approaches!","sol/rookie.wav"),
-    BRAWLER("A Brawler approaches!","sol/brawler.wav"),
-    CHALLENGER("A Challenger approaches!","sol/challenger.wav"),
-    GLADIATOR("A Gladiator approaches!","sol/gladiator.wav"),
-    HERO("A Hero approaches!","sol/hero.wav"),
-    CHAMPION("A Champion approaches!","sol/champion.wav"),
-    GRAND_CHAMPION("A Grand Champion approaches!","sol/grand_champion.wav"),
-    LET_ME_KNOW("Let me know when you want to begin.","sol/let_me_know.wav"),
     FOOTWORK("Let's start by testing your footwork.","sol/testing_your_footwork.wav"),
     SOMETHING_ELSE("Not bad. Let's try something else...","sol/try_something_else.wav"),
     HANDLE_THIS("Impressive. Let's see how you handle this...","sol/see_how_you_handle_this.wav"),

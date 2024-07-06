@@ -59,18 +59,10 @@ public interface BossVoicerConfig extends Config
 	default boolean includeSol() { return true; }
 
 	@ConfigItem(
-			keyName = "includeMinimus",
-			name = "Minimus",
-			description = "Whether or not some of Minimus's lines should be voiced.",
-			position = 7
-	)
-	default boolean includeMinimus() { return false; }
-
-	@ConfigItem(
 			keyName = "volumeGain",
 			name = "Volume Gain",
 			description = "The volume gain used for the voice over audios.",
-			position = 8
+			position = 7
 	)
 	@Range(min = -25, max = 6)
 	default int volumeGain() {

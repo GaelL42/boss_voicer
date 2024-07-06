@@ -99,9 +99,7 @@ I'm not finished with you just yet!
 You think this is over?  
 (Death Noise)  
 
-# Sol Heredit & Minimus dialogue :
-A Rookie/Brawler/Challenger/Gladiator/Hero/Champion/Grand Champion approaches!  
-Let me know when you want to begin.  
+# Sol Heredit & Minimus dialogue :  
 Let's start by testing your footwork.  
 Not bad. Let's try something else...  
 Impressive. Let's see how you handle this...  
