@@ -1,11 +1,10 @@
 # Boss Voicer
 Provides Voice Acting for the overhead & chatbox dialogues of the following bosses :  
--General Graardor  
--K'ril Tsutsaroth  
--Vet'ion/Calvar'ion  
+-General Graardor & K'ril Tsutsaroth in the God Wars Dungeon  
+-Vet'ion/Calvar'ion in the Wilderness  
 -The Barrows Brothers  
--Lady Verzik Vitur  
--Sol Heredit & Minimus  
+-Lady Verzik Vitur in the Theatre of Blood  
+-Sol Heredit in the Fortis Colosseum  
 
 Due to their unreasonably fast dialogue pace, the following bosses have not been voiced :  
 -Chaos Fanatic (talks every 2 ticks)  
@@ -99,7 +98,7 @@ I'm not finished with you just yet!
 You think this is over?  
 (Death Noise)  
 
-# Sol Heredit & Minimus dialogue :  
+# Sol Heredit dialogue :  
 Let's start by testing your footwork.  
 Not bad. Let's try something else...  
 Impressive. Let's see how you handle this...  
@@ -124,7 +123,8 @@ Maybe next time...
 Pathetic, really...  
 
 # Cut Content
-I had voiced the chatbox dialogue you get before your 1st Colosseum kc,  
+I had voiced the Sol Heredit chatbox dialogue you get before your 1st Colosseum kc,  
+plus the lines of dialogue Minimus shouts when you start a Colosseum run,  
 as well as Verzik's greeting text (preceeding her "Oh I'm going to enjoy this" line),  
 and the greeting text of the 2 Vyre Orators at the entrance of the Theatre of Blood.  
 But, due to the 10mb limit of Runelite plugins, I had to cut out some things.  
