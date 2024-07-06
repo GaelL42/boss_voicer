@@ -12,7 +12,7 @@ Due to their unreasonable speed of dialogue, the following bosses have not been 
 -Crazy Archaeologist (talks every 3 ticks)  
 -Deranged Archaeologist (talks every 3 ticks)  
 
-I have also not voiced Commander Zilyana due to her high pitch.  
+I have also not voiced Commander Zilyana due to her high pitch (I should find a woman to do it).  
   
 The dialogue lines voiced are as follows...  
 
@@ -89,7 +89,7 @@ I'll get you... next... time...
 You dare disturb my rest!  
 You dare steal from us!  
 
-# Verzik Vitur & Vyre Orators dialogue :  
+# Verzik Vitur & Vyre Orators Overhead & Chatbox dialogue :  
 Welcome, one and all, to the Theatre of Blood.  
 Verzik Vitur cordially invites you to the Theatre.  
 Glory awaits those who enter the Theatre!  
@@ -98,10 +98,8 @@ Only the Theatre can free you!
 You must stay and fight!  
 Now that was quite the show! I haven't been that entertained in a long time.  
 Of course, you know I can't let you leave here alive. Time for your final performance...  
-Back again for more? I admire your perseverance. Shall we begin?  
 Oh I'm going to enjoy this...  
 You think you can defeat me?  
-There's nothing for you there!  
 There's nothing under there for you!  
 Behold my true nature!  
 I'm not finished with you just yet!  
@@ -117,8 +115,6 @@ But you're clearly different. Let's see what you have this time...
 What is it they say? Third time's the charm? Let's see if that's true.  
 To arms!  
 You might be an incapable fighter, but at least you're persistent. Shall we?  
-  
-Also has a singular voiceline for Minimus ("Welcome, Grand Champion.") for debugging purposes.
 
 # Sol Heredit Overhead dialogue lines (can appear on every attempt) :
 Let's start by testing your footwork.  
@@ -144,6 +140,6 @@ Your light shines no longer.
 Maybe next time...  
 Pathetic, really...  
   
-Also has some voicelines for Minimus when he greets you into the Colosseum.  
+Also has some voicelines for Minimus when he greets you into the Colosseum (ie, "A Rookie approaches!).  
 
 And that's it!

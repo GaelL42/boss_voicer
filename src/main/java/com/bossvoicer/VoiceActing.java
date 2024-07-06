@@ -2,7 +2,6 @@ package com.bossvoicer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public enum VoiceActing {
 
@@ -34,50 +33,55 @@ public enum VoiceActing {
     KRIL_DEATH("K'ril Tsutsaroth Death", "kril/death.wav"),
 
     // Vet'ion & Calvar'ion text
-    I_WILL_SMITE_YOU_2("I WILL SMITE YOU!", "vetion/i_will_smite_you.wav"),
-    I_GOT_YOU_NOW_2("I'VE GOT YOU NOW!", "vetion/i_got_you_now.wav"),
-    STAND_STILL_RAT_2("STAND STILL, RAT!", "vetion/stand_still_rat.wav"),
-    YOU_CANT_ESCAPE_2("YOU CAN'T ESCAPE!", "vetion/you_cant_escape.wav"),
-    FOR_THE_LORD_2("FOR THE LORD!", "vetion/for_the_lord.wav"),
-    YOU_CALL_THAT_A_WEAPON_2("YOU CALL THAT A WEAPON?!", "vetion/you_call_that_a_weapon.wav"),
-    NOW_I_GOT_YOU_2("NOW I'VE GOT YOU!", "vetion/now_i_got_you.wav"),
-    HANDS_OFF_WRETCH_2("HANDS OFF, WRETCH!", "vetion/hands_off_wretch.wav"),
-    GRRRAH_2("GRRRAH!", "vetion/grrrah.wav"),
-    TIME_TO_FEAST_HOUNDS_2("TIME TO FEAST, HOUNDS!", "vetion/time_to_feast_hounds.wav"),
-    HOUNDS_DISPOSE_OF_THESE_TRESSPASSERS_2("HOUNDS! DISPOSE OF THESE TRESSPASSERS!", "vetion/hounds_dispose_of_these_tresspassers.wav"),
+    // Regular attacks
+    I_WILL_SMITE_YOU("I WILL SMITE YOU!", "vetion/i_will_smite_you.wav"),
+    I_GOT_YOU_NOW("I'VE GOT YOU NOW!", "vetion/i_got_you_now.wav"),
+    STAND_STILL_RAT("STAND STILL, RAT!", "vetion/stand_still_rat.wav"),
+    YOU_CANT_ESCAPE("YOU CAN'T ESCAPE!", "vetion/you_cant_escape.wav"),
+    FOR_THE_LORD("FOR THE LORD!", "vetion/for_the_lord.wav"),
+    YOU_CALL_THAT_A_WEAPON("YOU CALL THAT A WEAPON?!", "vetion/you_call_that_a_weapon.wav"),
+    DODGE_THIS("DODGE THIS!", "vetion/dodge_this.wav"),
+    PERISH_FOOL("PERISH, FOOL!", "vetion/perish_fool.wav"),
+    YOU_ARE_POWERLESS_TO_ME("YOU ARE POWERLESS TO ME!", "vetion/you_are_powerless_to_me.wav"),
+    TIME_TO_DIE_MORTAL("TIME TO DIE, MORTAL!", "vetion/time_to_die_mortal.wav"),
+    DIE("DIE!", "vetion/die.wav"),
+    DIE_RODENT("DIE, RODENT!", "vetion/die_rodent.wav"),
+    HOLD_STILL_SO_I_CAN_SMITE_YOU("HOLD STILL SO I CAN SMITE YOU!", "vetion/hold_still_so_I_can_smite_you.wav"),
+    YOURE_MINE_NOW("YOU'RE MINE NOW!", "vetion/youre_mine_now.wav"),
+    RAAARGH("RAAARGH!", "vetion/raaargh.wav"),
+    WEAK_FEEBLE("YOU ARE WEAK! YOU ARE FEEBLE!", "vetion/you_are_weak_you_are_feeble.wav"),
+    ILL_CUT_YOU_DOWN("I WILL CUT YOU DOWN!", "vetion/ill_cut_you_down.wav"),
+    ILL_END_YOU("I WILL END YOU!", "vetion/ill_end_you.wav"),
+    // Shoving attacks
+    NOW_I_GOT_YOU("NOW I'VE GOT YOU!", "vetion/now_i_got_you.wav"),
+    HANDS_OFF_WRETCH("HANDS OFF, WRETCH!", "vetion/hands_off_wretch.wav"),
+    GRRRAH("GRRRAH!", "vetion/grrrah.wav"),
+    FILTHY_WHELPS("FILTHY WHELPS!", "vetion/filthy_whelps.wav"),
+    YOURE_NOT_BLOCKING_THIS_ONE("YOU'RE NOT BLOCKING THIS ONE!", "vetion/youre_not_blocking_this_one.wav"),
+    DEFEND_YOURSELF("DEFEND YOURSELF!", "vetion/defend_yourself.wav"),
+    TAKE_THIS("TAKE THIS!", "vetion/take_this.wav"),
+    TOO_CLOSE("TOO CLOSE!", "vetion/too_close.wav"),
+    BACK_OFF_MUTT("BACK OFF, MUTT!", "vetion/back_off_mutt.wav"),
+    // Hounds summoning
+    TIME_TO_FEAST_HOUNDS("TIME TO FEAST, HOUNDS!", "vetion/time_to_feast_hounds.wav"),
+    HOUNDS_DISPOSE_OF_THESE_TRESSPASSERS("HOUNDS! DISPOSE OF THESE TRESSPASSERS!", "vetion/hounds_dispose_of_these_tresspassers.wav"),
+    HOUNDS_GET_THEM("GAH! HOUNDS! GET THEM!", "vetion/hounds_get_them.wav"),
+    ENOUGH_OF_THIS("I'VE HAD ENOUGH OF THIS! HOUNDS!", "vetion/enough_of_this.wav"),
+    GET_RID_OF_THESE_INTERLOPERS("HOUNDS! GET RID OF THESE INTERLOPERS!", "vetion/get_rid_of_these_interlopers.wav"),
+    GO_FORTH_MY_HOUNDS("GO FORTH, MY HOUNDS, AND DESTROY THEM!", "vetion/go_forth_my_hounds.wav"),
+    // Hounds demise
+    MUST_I_DO_EVERYTHING_AROUND_HERE("MUST I DO EVERYTHING AROUND HERE?!", "vetion/must_i_do_everything_around_here.wav"),
+    ILL_KILL_YOU_FOR_KILLING_MY_PETS("I'LL KILL YOU FOR KILLING MY PETS!", "vetion/ill_kill_you_for_killing_my_pets.wav"),
+    FINE_ILL_DEAL_WITH_YOU_MYSELF("FINE! I'LL DEAL WITH YOU MYSELF!", "vetion/fine_ill_deal_with_you_myself.wav"),
+    MAKE_YOU_PAY("MY HOUNDS! I'LL MAKE YOU PAY FOR THAT!", "vetion/make_you_pay.wav"),
+    // Phase transition & deaths
     NOW_DO_IT_AGAIN("Now... DO IT AGAIN!!!", "vetion/now_do_it_again.wav"),
-    DODGE_THIS_2("DODGE THIS!", "vetion/dodge_this.wav"),
-    PERISH_FOOL_2("PERISH, FOOL!", "vetion/perish_fool.wav"),
-    YOU_ARE_POWERLESS_TO_ME_2("YOU ARE POWERLESS TO ME!", "vetion/you_are_powerless_to_me.wav"),
-    TIME_TO_DIE_MORTAL_2("TIME TO DIE, MORTAL!", "vetion/time_to_die_mortal.wav"),
-    FILTHY_WHELPS_2("FILTHY WHELPS!", "vetion/filthy_whelps.wav"),
-    YOURE_NOT_BLOCKING_THIS_ONE_2("YOU'RE NOT BLOCKING THIS ONE!", "vetion/youre_not_blocking_this_one.wav"),
-    DEFEND_YOURSELF_2("DEFEND YOURSELF!", "vetion/defend_yourself.wav"),
-    MUST_I_DO_EVERYTHING_AROUND_HERE_2("MUST I DO EVERYTHING AROUND HERE?!", "vetion/must_i_do_everything_around_here.wav"),
-    ILL_KILL_YOU_FOR_KILLING_MY_PETS_2("I'LL KILL YOU FOR KILLING MY PETS!", "vetion/ill_kill_you_for_killing_my_pets.wav"),
     URGH_NOT_AGAIN("Urgh... not... again...", "vetion/not_again.wav"),
     URK_I_FAILED("Urk! I... failed...", "vetion/i_failed.wav"),
     ILL_BE_BACK("I'll... be... back...", "vetion/ill_be_back.wav"),
     THIS_ISNT_THE_LAST_OF_ME("This isn't... the last... of me...", "vetion/this_isnt_the_last_of_me.wav"),
     MY_LORD_IM_SORRY("My lord... I'm... sorry...", "vetion/my_lord_im_sorry.wav"),
     ILL_GET_YOU_NEXT_TIME("I'll get you... next... time...", "vetion/ill_get_you_next_time.wav"),
-    DIE_2("DIE!", "vetion/die.wav"),
-    DIE_RODENT_2("DIE, RODENT!", "vetion/die_rodent.wav"),
-    HOLD_STILL_SO_I_CAN_SMITE_YOU_2("HOLD STILL SO I CAN SMITE YOU!", "vetion/hold_still_so_I_can_smite_you.wav"),
-    YOURE_MINE_NOW_2("YOU'RE MINE NOW!", "vetion/youre_mine_now.wav"),
-    RAAARGH_2("RAAARGH!", "vetion/raaargh.wav"),
-    WEAK_FEEBLE_2("YOU ARE WEAK! YOU ARE FEEBLE!", "vetion/you_are_weak_you_are_feeble.wav"),
-    ILL_CUT_YOU_DOWN_2("I WILL CUT YOU DOWN!", "vetion/ill_cut_you_down.wav"),
-    ILL_END_YOU_2("I WILL END YOU!", "vetion/ill_end_you.wav"),
-    TAKE_THIS_2("TAKE THIS!", "vetion/take_this.wav"),
-    TOO_CLOSE_2("TOO CLOSE!", "vetion/too_close.wav"),
-    BACK_OFF_MUTT_2("BACK OFF, MUTT!", "vetion/back_off_mutt.wav"),
-    HOUNDS_GET_THEM_2("GAH! HOUNDS! GET THEM!", "vetion/hounds_get_them.wav"),
-    ENOUGH_OF_THIS_2("I'VE HAD ENOUGH OF THIS! HOUNDS!", "vetion/enough_of_this.wav"),
-    GET_RID_OF_THESE_INTERLOPERS_2("HOUNDS! GET RID OF THESE INTERLOPERS!", "vetion/get_rid_of_these_interlopers.wav"),
-    GO_FORTH_MY_HOUNDS_2("GO FORTH, MY HOUNDS, AND DESTROY THEM!", "vetion/go_forth_my_hounds.wav"),
-    FINE_ILL_DEAL_WITH_YOU_MYSELF_2("FINE! I'LL DEAL WITH YOU MYSELF!", "vetion/fine_ill_deal_with_you_myself.wav"),
-    MAKE_YOU_PAY_2("MY HOUNDS! I'LL MAKE YOU PAY FOR THAT!", "vetion/make_you_pay.wav"),
 
     // Barrows Brothers text
     DISTURB_MY_REST("You dare disturb my rest!", "barrows/you_dare_disturb_my_rest.wav"),
@@ -92,10 +96,8 @@ public enum VoiceActing {
     YOU_MUST_STAY_AND_FIGHT("You must stay and fight!", "tob/you_must_stay_and_fight.wav"),
     THAT_WAS_QUITE_THE_SHOW("Now that was quite the show! I haven't been that entertained in a long time.", "tob/that_was_quite_the_show.wav"),
     TIME_FOR_YOUR_FINAL_PERFORMANCE("Of course, you know I can't let you leave here alive. Time for your final performance...", "tob/time_for_your_final_performance.wav"),
-    BACK_AGAIN_FOR_MORE("Back again for more? I admire your perseverance. Shall we begin?", "tob/back_again_for_more.wav"),
     IM_GOING_TO_ENJOY_THIS("Oh I'm going to enjoy this...", "tob/im_going_to_enjoy_this.wav"),
     YOU_THINK_YOU_CAN_DEFEAT_ME("You think you can defeat me?", "tob/you_think_you_can_defeat_me.wav"),
-    NOTHING_FOR_YOU_THERE("There's nothing for you there!", "tob/nothing_for_you_there.wav"),
     NOTHING_UNDER_THERE_FOR_YOU("There's nothing under there for you!", "tob/nothing_under_there_for_you.wav"),
     BEHOLD_MY_TRUE_NATURE("Behold my true nature!", "tob/behold_my_true_nature.wav"),
     NOT_FINISHED_WITH_YOU("I'm not finished with you just yet!", "tob/not_finished_with_you_just_yet.wav"),
@@ -103,7 +105,6 @@ public enum VoiceActing {
     VERZIK_DEATH("Verzik Vitur Death", "tob/death.wav"),
 
     // Minimus & Sol Heredit text
-    WELCOME_GRAND_CHAMPION("Welcome, Grand Champion.", "sol/welcome_grand_champion.wav"),
     WORTHY_CHALLENGER("By Ralos, we finally have a worthy challenger.", "sol/worthy_challenger.wav"),
     ALMOST_IMPRESSED("You've torn through multiple waves of combatants and you're still standing. I'm almost impressed.", "sol/almost_impressed.wav"),
     REAL_FOE("Now let's see how you handle a real foe...","sol/real_foe.wav"),
@@ -143,11 +144,9 @@ public enum VoiceActing {
     SHINES_NO_LONGER("Your light shines no longer.","sol/your_light_shines_no_longer.wav"),
     MAYBE_NEXT_TIME("Maybe next time...","sol/maybe_next_time.wav"),
     PATHETIC_REALLY("Pathetic, really...","sol/pathetic_really.wav"),
-
     ;
 
     private static final Map<String, VoiceActing> triggerLines = new HashMap<>();
-
     static {
         for (VoiceActing voiceAct : values()) {
             triggerLines.put(voiceAct.triggerLine, voiceAct);
@@ -163,13 +162,6 @@ public enum VoiceActing {
     }
 
     public static VoiceActing forTriggerLine(String triggerLine) {
-        if (triggerLine.equals("I'LL TWIST YOUR HANDS OFF!")) {
-            Random rand = new Random();
-            int n = rand.nextInt(10);
-            if (n == 9) {
-                triggerLine = "I'LL TWIST YOUR D... OFF!"; // hehe...
-            }
-        }
         return triggerLines.get(triggerLine);
     }
 

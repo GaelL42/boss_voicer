@@ -14,14 +14,15 @@ import javax.inject.Inject;
 import javax.sound.sampled.*;
 import javax.sound.sampled.FloatControl.Type;
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
-
 import net.runelite.api.widgets.ComponentID;
 import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
+import java.util.Random;
 
 @Slf4j
 @PluginDescriptor(
@@ -29,6 +30,7 @@ import net.runelite.client.callback.ClientThread;
 )
 public class BossVoicerPlugin extends Plugin {
 	private final Map<VoiceActing, Clip> voiceActingClips = new HashMap<>();
+	Clip previousClip;
 
 	@Inject
 	private BossVoicerConfig config;
@@ -49,6 +51,8 @@ public class BossVoicerPlugin extends Plugin {
 	}
 	@Override
 	protected void shutDown() throws Exception {
+		if (previousClip != null && previousClip.isRunning())
+			previousClip.stop();
 		unloadVoiceActs();
 	}
 	@Provides
@@ -69,7 +73,6 @@ public class BossVoicerPlugin extends Plugin {
 				}
 				String npcName = npcNameWidget.getText();
 				if ((npcName.equals("Sol Heredit") && config.includeSol())
-						|| (npcName.equals("Minimus") && config.includeMinimus())
 						|| (npcName.equals("Vyre Orator") && config.includeOrators())
 						|| (npcName.equals("Verzik Vitur") && config.includeVerzik())) {
 					Widget textWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
@@ -108,6 +111,13 @@ public class BossVoicerPlugin extends Plugin {
 					|| (actorName.equals("Torag the Corrupted") && config.includeBarrows())
 					|| (actorName.equals("Verac the Defiled") && config.includeBarrows())) {
 				String text = Text.removeTags(event.getOverheadText());
+				if (actorName.equals("Sol Heredit") && text.equals("I'LL TWIST YOUR HANDS OFF!")) {
+					Random rand = new Random();
+					int n = rand.nextInt(10);
+					if (n == 9) {
+						text = "I'LL TWIST YOUR D... OFF!"; // hehe
+					}
+				}
 				log.debug("About to try to play a sound from an overhead : " + text);
 				VoiceActing voiceAct = VoiceActing.forTriggerLine(text);
 				if (voiceAct == null) {
@@ -124,14 +134,16 @@ public class BossVoicerPlugin extends Plugin {
 		}
 	}
 
-	// Death Sounds Logic, for bosses whose deaths feel a bit lacking!
+	// Death Sounds Logic, for bosses whose deaths feel a little bit lacking!
 	@Subscribe
 	public void onActorDeath(ActorDeath event) {
 		if (event != null && event.getActor() != null) {
 			String actorName = event.getActor().getName();
+			int actorLevel = event.getActor().getCombatLevel();
 			if ((actorName.equals("General Graardor") && config.includeGraardor())
 					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
-					|| (actorName.equals("Verzik Vitur") && config.includeVerzik())) {
+					|| (actorName.equals("Verzik Vitur") && config.includeVerzik()) &&
+							(actorLevel == 512 || actorLevel == 1520)) { // to avoid a P2 death sound
 				log.debug("About to try to play a sound from a death");
 				VoiceActing voiceAct = VoiceActing.forTriggerLine(actorName + " Death");
 				if (voiceAct != null) {
@@ -199,18 +211,18 @@ public class BossVoicerPlugin extends Plugin {
 	}
 	private void playVoiceAct(String actorName, VoiceActing voiceAct) {
 		if (actorName.equals("Vyre Orator") && isAnyClipRunning()) {
-			log.debug("Preventing the 2 Vyre Orators from talking over each other.");
+			log.debug("Preventing the 2nd Vyre Orator from talking over the 1st one.");
 		} else {
+			if (previousClip != null && previousClip.isRunning())
+				previousClip.stop();
 			Clip clip = voiceActingClips.get(voiceAct);
 			if (clip == null) {
 				log.warn("Voice clip '{}' is not loaded.", voiceAct);
 			} else {
-				playSound(clip);
+				clip.setFramePosition(0);
+				clip.loop(0);
+				previousClip = clip;
 			}
 		}
-	}
-	private void playSound(Clip audioClip) {
-		audioClip.setFramePosition(0);
-		audioClip.loop(0);
 	}
 }
