@@ -60,6 +60,7 @@ public class BossVoicerPlugin extends Plugin {
 	}
 
 	// Chatbox Dialogue Logic
+	// (currently only for Verzik's "Oh I'm going to enjoy this" due to cut content)
 	@Subscribe(priority=-100)
 	private void onWidgetLoaded(WidgetLoaded event) {
 		if (event.getGroupId() == InterfaceID.DIALOG_NPC) {
@@ -71,9 +72,7 @@ public class BossVoicerPlugin extends Plugin {
 					return;
 				}
 				String npcName = npcNameWidget.getText();
-				if ((npcName.equals("Sol Heredit") && config.includeSol())
-						|| (npcName.equals("Vyre Orator") && config.includeOrators())
-						|| (npcName.equals("Verzik Vitur") && config.includeVerzik())) {
+				if ((npcName.equals("Verzik Vitur") && config.includeVerzik())) {
 					Widget textWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
 					if (textWidget == null || textWidget.getText() == null) {
 						log.error("NPC dialog textWidget or textWidget.getText() is null");
@@ -101,7 +100,6 @@ public class BossVoicerPlugin extends Plugin {
 					|| (actorName.equals("Calvar'ion") && config.includeVetion())
 					|| (actorName.equals("Minimus") && config.includeMinimus())
 					|| (actorName.equals("Sol Heredit") && config.includeSol())
-					|| (actorName.equals("Vyre Orator") && config.includeOrators())
 					|| (actorName.equals("Verzik Vitur") && config.includeVerzik())
 					|| (actorName.equals("Ahrim the Blighted") && config.includeBarrows())
 					|| (actorName.equals("Dharok the Wretched") && config.includeBarrows())

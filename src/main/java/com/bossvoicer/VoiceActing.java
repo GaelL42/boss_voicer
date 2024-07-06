@@ -33,7 +33,6 @@ public enum VoiceActing {
     KRIL_DEATH("K'ril Tsutsaroth Death", "kril/death.wav"),
 
     // Vet'ion & Calvar'ion text
-    // Regular attacks
     I_WILL_SMITE_YOU("I WILL SMITE YOU!", "vetion/i_will_smite_you.wav"),
     I_GOT_YOU_NOW("I'VE GOT YOU NOW!", "vetion/i_got_you_now.wav"),
     STAND_STILL_RAT("STAND STILL, RAT!", "vetion/stand_still_rat.wav"),
@@ -52,7 +51,6 @@ public enum VoiceActing {
     WEAK_FEEBLE("YOU ARE WEAK! YOU ARE FEEBLE!", "vetion/you_are_weak_you_are_feeble.wav"),
     ILL_CUT_YOU_DOWN("I WILL CUT YOU DOWN!", "vetion/ill_cut_you_down.wav"),
     ILL_END_YOU("I WILL END YOU!", "vetion/ill_end_you.wav"),
-    // Shoving attacks
     NOW_I_GOT_YOU("NOW I'VE GOT YOU!", "vetion/now_i_got_you.wav"),
     HANDS_OFF_WRETCH("HANDS OFF, WRETCH!", "vetion/hands_off_wretch.wav"),
     GRRRAH("GRRRAH!", "vetion/grrrah.wav"),
@@ -62,19 +60,16 @@ public enum VoiceActing {
     TAKE_THIS("TAKE THIS!", "vetion/take_this.wav"),
     TOO_CLOSE("TOO CLOSE!", "vetion/too_close.wav"),
     BACK_OFF_MUTT("BACK OFF, MUTT!", "vetion/back_off_mutt.wav"),
-    // Hounds summoning
     TIME_TO_FEAST_HOUNDS("TIME TO FEAST, HOUNDS!", "vetion/time_to_feast_hounds.wav"),
     HOUNDS_DISPOSE_OF_THESE_TRESSPASSERS("HOUNDS! DISPOSE OF THESE TRESSPASSERS!", "vetion/hounds_dispose_of_these_tresspassers.wav"),
     HOUNDS_GET_THEM("GAH! HOUNDS! GET THEM!", "vetion/hounds_get_them.wav"),
     ENOUGH_OF_THIS("I'VE HAD ENOUGH OF THIS! HOUNDS!", "vetion/enough_of_this.wav"),
     GET_RID_OF_THESE_INTERLOPERS("HOUNDS! GET RID OF THESE INTERLOPERS!", "vetion/get_rid_of_these_interlopers.wav"),
     GO_FORTH_MY_HOUNDS("GO FORTH, MY HOUNDS, AND DESTROY THEM!", "vetion/go_forth_my_hounds.wav"),
-    // Hounds demise
     MUST_I_DO_EVERYTHING_AROUND_HERE("MUST I DO EVERYTHING AROUND HERE?!", "vetion/must_i_do_everything_around_here.wav"),
     ILL_KILL_YOU_FOR_KILLING_MY_PETS("I'LL KILL YOU FOR KILLING MY PETS!", "vetion/ill_kill_you_for_killing_my_pets.wav"),
     FINE_ILL_DEAL_WITH_YOU_MYSELF("FINE! I'LL DEAL WITH YOU MYSELF!", "vetion/fine_ill_deal_with_you_myself.wav"),
     MAKE_YOU_PAY("MY HOUNDS! I'LL MAKE YOU PAY FOR THAT!", "vetion/make_you_pay.wav"),
-    // Phase transition & deaths
     NOW_DO_IT_AGAIN("Now... DO IT AGAIN!!!", "vetion/now_do_it_again.wav"),
     URGH_NOT_AGAIN("Urgh... not... again...", "vetion/not_again.wav"),
     URK_I_FAILED("Urk! I... failed...", "vetion/i_failed.wav"),
@@ -87,15 +82,7 @@ public enum VoiceActing {
     DISTURB_MY_REST("You dare disturb my rest!", "barrows/you_dare_disturb_my_rest.wav"),
     STEAL_FROM_US("You dare steal from us!", "barrows/you_dare_steal_from_us.wav"),
 
-    // Theatre of Blood (Vyre Orators & Verzik Vitur) text
-    WELC0ME_TO_TOB("Welcome, one and all, to the Theatre of Blood.", "tob/welcome_one_and_all.wav"),
-    VERZIK_CORDIALLY_INVITES_YOU("Verzik Vitur cordially invites you to the Theatre.", "tob/verzik_cordially_invites_you.wav"),
-    GLORY_AWAITS("Glory awaits those who enter the Theatre!", "tob/glory_awaits.wav"),
-    PROVE_YOUR_WORTH("Prove your worth in the Theatre!", "tob/prove_your_worth.wav"),
-    ONLY_THE_THEATRE_CAN_FREE_YOU("Only the Theatre can free you!", "tob/only_the_theatre_can_free_you.wav"),
-    YOU_MUST_STAY_AND_FIGHT("You must stay and fight!", "tob/you_must_stay_and_fight.wav"),
-    THAT_WAS_QUITE_THE_SHOW("Now that was quite the show! I haven't been that entertained in a long time.", "tob/that_was_quite_the_show.wav"),
-    TIME_FOR_YOUR_FINAL_PERFORMANCE("Of course, you know I can't let you leave here alive. Time for your final performance...", "tob/time_for_your_final_performance.wav"),
+    // Verzik Vitur text
     IM_GOING_TO_ENJOY_THIS("Oh I'm going to enjoy this...", "tob/im_going_to_enjoy_this.wav"),
     YOU_THINK_YOU_CAN_DEFEAT_ME("You think you can defeat me?", "tob/you_think_you_can_defeat_me.wav"),
     NOTHING_UNDER_THERE_FOR_YOU("There's nothing under there for you!", "tob/nothing_under_there_for_you.wav"),
@@ -105,14 +92,6 @@ public enum VoiceActing {
     VERZIK_DEATH("Verzik Vitur Death", "tob/death.wav"),
 
     // Minimus & Sol Heredit text
-    WORTHY_CHALLENGER("By Ralos, we finally have a worthy challenger.", "sol/worthy_challenger.wav"),
-    ALMOST_IMPRESSED("You've torn through multiple waves of combatants and you're still standing. I'm almost impressed.", "sol/almost_impressed.wav"),
-    REAL_FOE("Now let's see how you handle a real foe...","sol/real_foe.wav"),
-    BACK_SO_SOON("You're back so soon? A lesser combatant would've retired in shame after the show you put on last time...", "sol/back_so_soon.wav"),
-    CLEARLY_DIFFERENT("But you're clearly different. Let's see what you have this time...","sol/clearly_different.wav"),
-    THIRD_TIME("What is it they say? Third time's the charm? Let's see if that's true.","sol/third_time_the_charm.wav"),
-    TO_ARMS("To arms!","sol/to_arms.wav"),
-    INCAPABLE_FIGHTER("You might be an incapable fighter, but at least you're persistent. Shall we?,","sol/incapable_fighter.wav"),
     ROOKIE("A Rookie approaches!","sol/rookie.wav"),
     BRAWLER("A Brawler approaches!","sol/brawler.wav"),
     CHALLENGER("A Challenger approaches!","sol/challenger.wav"),

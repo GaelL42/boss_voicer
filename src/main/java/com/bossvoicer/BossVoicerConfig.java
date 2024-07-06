@@ -35,26 +35,10 @@ public interface BossVoicerConfig extends Config
 	default boolean includeVetion() { return true; }
 
 	@ConfigItem(
-			keyName = "includeSol",
-			name = "Sol Heredit",
-			description = "Whether or not Sol Heredit should be voiced.",
-			position = 4
-	)
-	default boolean includeSol() { return true; }
-
-	@ConfigItem(
-			keyName = "includeMinimus",
-			name = "Minimus",
-			description = "Whether or not some of Minimus's lines should be voiced.",
-			position = 5
-	)
-	default boolean includeMinimus() { return false; }
-
-	@ConfigItem(
 			keyName = "includeBarrows",
 			name = "Barrows Brothers",
 			description = "Whether or not the Barrows Brothers should be voiced (only 2 lines).",
-			position = 6
+			position = 4
 	)
 	default boolean includeBarrows() { return true; }
 
@@ -62,23 +46,31 @@ public interface BossVoicerConfig extends Config
 			keyName = "includeVerzik",
 			name = "Verzik Vitur",
 			description = "Whether or not Lazy Verzik Vitur should be voiced.",
-			position = 7
+			position = 5
 	)
 	default boolean includeVerzik() { return true; }
 
 	@ConfigItem(
-			keyName = "includeOrators",
-			name = "Vyre Orators",
-			description = "Whether or not the Vyre Orators should be voiced.",
-			position = 8
+			keyName = "includeSol",
+			name = "Sol Heredit",
+			description = "Whether or not Sol Heredit should be voiced.",
+			position = 6
 	)
-	default boolean includeOrators() { return false; }
+	default boolean includeSol() { return true; }
+
+	@ConfigItem(
+			keyName = "includeMinimus",
+			name = "Minimus",
+			description = "Whether or not some of Minimus's lines should be voiced.",
+			position = 7
+	)
+	default boolean includeMinimus() { return false; }
 
 	@ConfigItem(
 			keyName = "volumeGain",
 			name = "Volume Gain",
 			description = "The volume gain used for the voice over audios.",
-			position = 9
+			position = 8
 	)
 	@Range(min = -25, max = 6)
 	default int volumeGain() {

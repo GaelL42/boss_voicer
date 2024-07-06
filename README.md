@@ -1,22 +1,23 @@
 # Boss Voicer
-Provides Voice Acting for the overhead & chatbox dialogues of the following bosses :   
--Sol Heredit & Minimus  
+Provides Voice Acting for the overhead & chatbox dialogues of the following bosses : 
 -General Graardor  
 -K'ril Tsutsaroth  
--Vet'ion & Calvar'ion  
+-Vet'ion/Calvar'ion  
 -The Barrows Brothers  
--Verzik Vitur & her Vyre Orators  
-  
-Due to their unreasonable speed of dialogue, the following bosses have not been voiced :  
+-Lady Verzik Vitur  
+-Sol Heredit & Minimus  
+
+Due to their unreasonably fast dialogue pace, the following bosses have not been voiced :  
 -Chaos Fanatic (talks every 2 ticks)  
 -Crazy Archaeologist (talks every 3 ticks)  
 -Deranged Archaeologist (talks every 3 ticks)  
 
-I have also not voiced Commander Zilyana due to her high pitch (I should find a woman to do it).  
+I have also not voiced Commander Zilyana due to her high pitch of voice.  
+Maybe I should find a woman to voice her someday, assuming it doesn't bust the space limit.  
   
 The dialogue lines voiced are as follows...  
 
-# General Graardor Overhead dialogue :
+# General Graardor dialogue :
 Split their skulls!  
 Crush them underfoot!  
 For the glory of the Big High War God!  
@@ -29,7 +30,7 @@ Break their bones!
 GRRRAAAAAR!  
 (Death Noise)  
   
-# K'ril Tsutsaroth Overhead dialogue :  
+# K'ril Tsutsaroth dialogue :  
 Kill them, you cowards!  
 Zamorak curse them!  
 Death to Saradomin's dogs!  
@@ -43,7 +44,7 @@ No retreat!
 YARRRRRRR!  
 (Death Noise)  
 
-# Vet'ion & Calvar'ion Overhead dialogue :  
+# Vet'ion & Calvar'ion dialogue :  
 Die!  
 Die, rodent!  
 Hold still so I can smite you!  
@@ -85,19 +86,11 @@ This isn't... the last... of me...
 My lord... I'm... sorry...  
 I'll get you... next... time...  
 
-# Barrows Brothers Overhead dialogue :  
+# Barrows Brothers dialogue :  
 You dare disturb my rest!  
 You dare steal from us!  
 
-# Verzik Vitur & Vyre Orators Overhead & Chatbox dialogue :  
-Welcome, one and all, to the Theatre of Blood.  
-Verzik Vitur cordially invites you to the Theatre.  
-Glory awaits those who enter the Theatre!  
-Prove your worth in the Theatre!  
-Only the Theatre can free you!  
-You must stay and fight!  
-Now that was quite the show! I haven't been that entertained in a long time.  
-Of course, you know I can't let you leave here alive. Time for your final performance...  
+# Verzik Vitur dialogue :  
 Oh I'm going to enjoy this...  
 You think you can defeat me?  
 There's nothing under there for you!  
@@ -106,17 +99,9 @@ I'm not finished with you just yet!
 You think this is over?  
 (Death Noise)  
 
-# Sol Heredit Chatbox dialogue lines (can only appear before your 1st kc) :
-By Ralos, we finally have a worthy challenger.  
-You've torn through multiple waves of combatants and you're still standing. I'm almost impressed.  
-Now let's see how you handle a real foe...  
-You're back so soon? A lesser combatant would've retired in shame after the show you put on last time...  
-But you're clearly different. Let's see what you have this time...  
-What is it they say? Third time's the charm? Let's see if that's true.  
-To arms!  
-You might be an incapable fighter, but at least you're persistent. Shall we?  
-
-# Sol Heredit Overhead dialogue lines (can appear on every attempt) :
+# Sol Heredit & Minimus dialogue :
+A Rookie/Brawler/Challenger/Gladiator/Hero/Champion/Grand Champion approaches!  
+Let me know when you want to begin.  
 Let's start by testing your footwork.  
 Not bad. Let's try something else...  
 Impressive. Let's see how you handle this...  
@@ -139,7 +124,11 @@ Your lack of coordination is concerning.
 Your light shines no longer.  
 Maybe next time...  
 Pathetic, really...  
-  
-Also has some voicelines for Minimus when he greets you into the Colosseum (ie, "A Rookie approaches!).  
 
-And that's it!
+# Cut Content
+I had voiced the chatbox dialogue you get before your 1st Colosseum kc, 
+as well as Verzik's greeting text (preceeding her "Oh I'm going to enjoy this" line),  
+and the greeting text of the 2 Vyre Orators at the entrance of the Theatre of Blood.  
+But, due to the 10mb limit of Runelite plugins, I had to cut out some things.  
+If I wish to expand the plugin to cover more bosses in the future,  
+I'll probably need to have the voice files downloaded at execution time.  
