@@ -1,5 +1,5 @@
 # Boss Voicer
-Provides Voice Acting for the overhead & chatbox dialogues of the following bosses : 
+Provides Voice Acting for the overhead & chatbox dialogues of the following bosses :  
 -General Graardor  
 -K'ril Tsutsaroth  
 -Vet'ion/Calvar'ion  
@@ -126,7 +126,7 @@ Maybe next time...
 Pathetic, really...  
 
 # Cut Content
-I had voiced the chatbox dialogue you get before your 1st Colosseum kc, 
+I had voiced the chatbox dialogue you get before your 1st Colosseum kc,  
 as well as Verzik's greeting text (preceeding her "Oh I'm going to enjoy this" line),  
 and the greeting text of the 2 Vyre Orators at the entrance of the Theatre of Blood.  
 But, due to the 10mb limit of Runelite plugins, I had to cut out some things.  
