@@ -111,7 +111,7 @@ public enum VoiceActing {
     REAL_FOE("Now let's see how you handle a real foe...","sol/real_foe.wav"),
     WHAT_YOU_HAVE_THIS_TIME("But you're clearly different. Let's see what you have this time...","sol/what_you_have_this_time.wav"),
     TO_ARMS("To arms!","sol/to_arms.wav"),
-    INCAPABLE_FIGHTER("You might be an incapable fighter, but at least you're persistent. Shall we?,","sol/incapable_fighter.wav"),
+    SHALL_WE("You might be an incapable fighter, but at least you're persistent. Shall we?,","sol/shall_we.wav"),
     FOOTWORK("Let's start by testing your footwork.","sol/testing_your_footwork.wav"),
     SOMETHING_ELSE("Not bad. Let's try something else...","sol/try_something_else.wav"),
     HANDLE_THIS("Impressive. Let's see how you handle this...","sol/see_how_you_handle_this.wav"),
