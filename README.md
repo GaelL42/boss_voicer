@@ -27,7 +27,7 @@ We feast on the bones of our enemies tonight!
 Death to our enemies!  
 Break their bones!  
 GRRRAAAAAR!  
-(Death Noise)  
+(Custom Death Noise) Aaaargh...  
   
 # K'ril Tsutsaroth dialogue   
 Kill them, you cowards!  
@@ -41,7 +41,7 @@ Attack!
 The Dark One will have their souls!  
 No retreat!  
 YARRRRRRR!  
-(Death Noise)  
+(Custom Death Noise) Zamorak, I have failed you...  
 
 # Kree'arra dialogue  
 Skreeee!  
@@ -116,9 +116,13 @@ There's nothing under there for you!
 Behold my true nature!  
 I'm not finished with you just yet!  
 You think this is over?  
-(Death Noise)  
+(Custom Death Noise)  Welp, time to make my escape!  
 
 # Sol Heredit dialogue  
+Now let's see how you handle a real foe...
+Let's see what you have this time...
+To arms!
+You might be an incapable fighter, but at least you're persistent. Shall we?
 Let's start by testing your footwork.  
 Not bad. Let's try something else...  
 Impressive. Let's see how you handle this...  
@@ -142,6 +146,19 @@ Your light shines no longer.
 Maybe next time...  
 Pathetic, really...  
 
+# A note regarding plugin legality  
+On https://secure.runescape.com/m=news/third-party-client-guidelines?oldschool=1 ,  
+the following is prohibited : "Adds additional visual or audio indicators of a boss mechanic  
+except in cases where this is a manually triggered external helper."  
+From a strict reading of this rule, the present Boss Voicer plugin would not be acceptable.  
+However, considering that a similar plugin, Nex Nostalgia, has been approved  
+(which I assume was because the sounds did actually exist in the original RS2 game),  
+I remain hopeful that my plugin will be approved as well,  
+as my goal is to provide entertainment & immersion, not in-game advantages.  
+Now of course, the Grapple Special Overhead Text voicing may be particularly contentious here,  
+but I am more than happy to remove those particular voice clips if that can make things easier.  
+Let me know, Runelite Dev team!  
+
 # A note regarding sound quality  
 Due to Runelite plugins having a maximum size of 10 megabytes,  
 I had to save the sound files in a rather low amount of kilohertz.  
@@ -152,5 +169,4 @@ though I apologize if it doesn't sound too great on your machines.
 In the future, I might adapt the logic to host the files externally,  
 and thus download them at execution time (like the C Engineer plugin does).  
 This definitely will be needed if I add any more bosses,  
-as I am extremely close to the 10mb limit as it is!  
-We shall see.  
+as I am extremely close to the 10mb limit as it is (~9.91)! We shall see.  
