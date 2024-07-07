@@ -13,8 +13,12 @@ Due to their unreasonably fast dialogue pace, the following have not been voiced
 -Chaos Fanatic (talks every 2 ticks!)  
 -Crazy Archaeologist (talks every 3 ticks!)  
 -Deranged Archaeologist (talks every 3 ticks!)  
+
+I have also not voiced Quest Bosses like Glod or the Fragment of Seren,  
+due to plugin size limits (see the footnote about sound quality).  
+If this plugin gets approved, I might make a separate "Quest Boss Voicer" plugin.  
   
-The dialogue lines voiced are as follows...  
+The dialogue lines voiced in this proposed plugin are as follows...  
 
 # General Graardor dialogue  
 Split their skulls!  
