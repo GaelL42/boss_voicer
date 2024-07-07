@@ -27,10 +27,26 @@ public interface BossVoicerConfig extends Config
 	default boolean includeKril() { return true; }
 
 	@ConfigItem(
+			keyName = "includeKree",
+			name = "Kree'arra",
+			description = "Whether or not Kree'arra should be voiced.",
+			position = 3
+	)
+	default boolean includeKree() { return true; }
+
+	@ConfigItem(
+			keyName = "includeZily",
+			name = "Commander Zilyana",
+			description = "Whether or not Commander Zilyana should be voiced.",
+			position = 4
+	)
+	default boolean includeZily() { return true; }
+
+	@ConfigItem(
 			keyName = "includeVetion",
 			name = "Vet'ion & Calvar'ion",
 			description = "Whether or not Vet'ion & Calvar'ion should be voiced.",
-			position = 3
+			position = 5
 	)
 	default boolean includeVetion() { return true; }
 
@@ -38,7 +54,7 @@ public interface BossVoicerConfig extends Config
 			keyName = "includeBarrows",
 			name = "Barrows Brothers",
 			description = "Whether or not the Barrows Brothers should be voiced (only 2 lines).",
-			position = 4
+			position = 6
 	)
 	default boolean includeBarrows() { return true; }
 
@@ -46,7 +62,7 @@ public interface BossVoicerConfig extends Config
 			keyName = "includeVerzik",
 			name = "Verzik Vitur",
 			description = "Whether or not Lazy Verzik Vitur should be voiced.",
-			position = 5
+			position = 7
 	)
 	default boolean includeVerzik() { return true; }
 
@@ -54,7 +70,7 @@ public interface BossVoicerConfig extends Config
 			keyName = "includeSol",
 			name = "Sol Heredit",
 			description = "Whether or not Sol Heredit should be voiced.",
-			position = 6
+			position = 8
 	)
 	default boolean includeSol() { return true; }
 
@@ -62,10 +78,18 @@ public interface BossVoicerConfig extends Config
 			keyName = "volumeGain",
 			name = "Volume Gain",
 			description = "The volume gain used for the voice over audios.",
-			position = 7
+			position = 9
 	)
 	@Range(min = -25, max = 6)
 	default int volumeGain() {
-		return 0;
+		return -10;
 	}
+
+	@ConfigItem(
+			keyName = "allowMultipleVoices",
+			name = "Allow Multiple Voices",
+			description = "Whether or not multiple voice clips can play simultaneously.",
+			position = 10
+	)
+	default boolean allowMultipleVoices() { return false; }
 }

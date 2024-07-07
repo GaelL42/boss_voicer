@@ -32,6 +32,22 @@ public enum VoiceActing {
     YARRR("YARRRRRRR!","kril/yarrr.wav"),
     KRIL_DEATH("K'ril Tsutsaroth Death", "kril/death.wav"),
 
+    // Kree'arra text
+    SKREEEEE("Skreeeee!","kree/skreeeee.wav"),
+    KRAAAAW("Kraaaw!","kree/kraaaw.wav"),
+
+    // Commander Zilyana text
+    ALL_PRAISE_SARADOMIN("All praise Saradomin!","zily/all_praise_saradomin.wav"),
+    SLAY_THE_EVIL_ONES("Slay the evil ones!","zily/slay_the_evil_ones.wav"),
+    DEATH_TO_THE_ENEMIES_OF_THE_LIGHT("Death to the enemies of the light!","zily/death_to_the_enemies_of_the_light.wav"),
+    SARADOMIN_LEND_ME_STRENGTH("Saradomin lend me strength!","zily/saradomin_lend_me_strength.wav"),
+    SARADOMIN_IS_WITH_US("Saradomin is with us!","zily/saradomin_is_with_us.wav"),
+    FORWARD_OUR_ALLIES_ARE_WITH_US("Forward! Our allies are with us!","zily/forward_our_allies_are_with_us.wav"),
+    GOOD_WILL_ALWAYS_TRIUMPH("Good will always triumph!","zily/good_will_always_triumph.wav"),
+    MAY_SARADOMIN_BE_MY_SWORD("May Saradomin be my sword!","zily/may_saradomin_be_my_sword.wav"),
+    IN_THE_NAME_OF_SARADOMIN("In the name of Saradomin!","zily/in_the_name_of_saradomin.wav"),
+    ATTACK_FIND_THE_GODSWORD("Attack! Find the Godsword!","zily/attack_find_the_godsword.wav"),
+
     // Vet'ion & Calvar'ion text
     I_WILL_SMITE_YOU("I WILL SMITE YOU!", "vetion/i_will_smite_you.wav"),
     I_GOT_YOU_NOW("I'VE GOT YOU NOW!", "vetion/i_got_you_now.wav"),
@@ -83,15 +99,19 @@ public enum VoiceActing {
     STEAL_FROM_US("You dare steal from us!", "barrows/you_dare_steal_from_us.wav"),
 
     // Verzik Vitur text
-    IM_GOING_TO_ENJOY_THIS("Oh I'm going to enjoy this...", "tob/im_going_to_enjoy_this.wav"),
-    YOU_THINK_YOU_CAN_DEFEAT_ME("You think you can defeat me?", "tob/you_think_you_can_defeat_me.wav"),
-    NOTHING_UNDER_THERE_FOR_YOU("There's nothing under there for you!", "tob/nothing_under_there_for_you.wav"),
-    BEHOLD_MY_TRUE_NATURE("Behold my true nature!", "tob/behold_my_true_nature.wav"),
-    NOT_FINISHED_WITH_YOU("I'm not finished with you just yet!", "tob/not_finished_with_you_just_yet.wav"),
-    YOU_THINK_THIS_IS_OVER("You think this is over?", "tob/you_think_this_is_over.wav"),
-    VERZIK_DEATH("Verzik Vitur Death", "tob/death.wav"),
+    IM_GOING_TO_ENJOY_THIS("Oh I'm going to enjoy this...", "verzik/im_going_to_enjoy_this.wav"),
+    YOU_THINK_YOU_CAN_DEFEAT_ME("You think you can defeat me?", "verzik/you_think_you_can_defeat_me.wav"),
+    NOTHING_UNDER_THERE_FOR_YOU("There's nothing under there for you!", "verzik/nothing_under_there_for_you.wav"),
+    BEHOLD_MY_TRUE_NATURE("Behold my true nature!", "verzik/behold_my_true_nature.wav"),
+    NOT_FINISHED_WITH_YOU("I'm not finished with you just yet!", "verzik/not_finished_with_you_just_yet.wav"),
+    YOU_THINK_THIS_IS_OVER("You think this is over?!", "verzik/you_think_this_is_over.wav"),
+    VERZIK_DEATH("Verzik Vitur Death", "verzik/death.wav"),
 
-    // Minimus & Sol Heredit text
+    // Sol Heredit text
+    REAL_FOE("Now let's see how you handle a real foe...","sol/real_foe.wav"),
+    WHAT_YOU_HAVE_THIS_TIME("But you're clearly different. Let's see what you have this time...","sol/what_you_have_this_time.wav"),
+    TO_ARMS("To arms!","sol/to_arms.wav"),
+    INCAPABLE_FIGHTER("You might be an incapable fighter, but at least you're persistent. Shall we?,","sol/incapable_fighter.wav"),
     FOOTWORK("Let's start by testing your footwork.","sol/testing_your_footwork.wav"),
     SOMETHING_ELSE("Not bad. Let's try something else...","sol/try_something_else.wav"),
     HANDLE_THIS("Impressive. Let's see how you handle this...","sol/see_how_you_handle_this.wav"),

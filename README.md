@@ -1,22 +1,22 @@
-# Boss Voicer
+# BOSS VOICER
 Provides Voice Acting for the overhead & chatbox dialogues of the following bosses :  
--General Graardor & K'ril Tsutsaroth in the God Wars Dungeon  
--Vet'ion/Calvar'ion in the Wilderness  
--The Barrows Brothers  
--Lady Verzik Vitur in the Theatre of Blood  
--Sol Heredit in the Fortis Colosseum  
+-General Graardor  
+-K'ril Tsutsaroth  
+-Kree'arra  
+-Commander Zilyana  
+-Vet'ion/Calvar'ion   
+-The Barrows Brothers    
+-Lady Verzik Vitur  
+-Sol Heredit  
 
-Due to their unreasonably fast dialogue pace, the following bosses have not been voiced :  
--Chaos Fanatic (talks every 2 ticks)  
--Crazy Archaeologist (talks every 3 ticks)  
--Deranged Archaeologist (talks every 3 ticks)  
-
-I have also not voiced Commander Zilyana due to her high pitch of voice.  
-Maybe I should find a woman to voice her someday, assuming it doesn't bust the space limit.  
+Due to their unreasonably fast dialogue pace, the following have not been voiced :  
+-Chaos Fanatic (talks every 2 ticks!)  
+-Crazy Archaeologist (talks every 3 ticks!)  
+-Deranged Archaeologist (talks every 3 ticks!)  
   
 The dialogue lines voiced are as follows...  
 
-# General Graardor dialogue :
+# General Graardor dialogue  
 Split their skulls!  
 Crush them underfoot!  
 For the glory of the Big High War God!  
@@ -29,7 +29,7 @@ Break their bones!
 GRRRAAAAAR!  
 (Death Noise)  
   
-# K'ril Tsutsaroth dialogue :  
+# K'ril Tsutsaroth dialogue   
 Kill them, you cowards!  
 Zamorak curse them!  
 Death to Saradomin's dogs!  
@@ -43,41 +43,61 @@ No retreat!
 YARRRRRRR!  
 (Death Noise)  
 
-# Vet'ion & Calvar'ion dialogue :  
-Die!  
-Die, rodent!  
-Hold still so I can smite you!  
-You're mine now!  
-Raaargh!  
-You are weak! You are feeble!  
-I will cut you down!  
-I will end you!  
-I will smite you!  
-I've got you now!  
-Stand still, rat!  
-You can't escape!  
-For the lord!  
-You call that a weapon?!  
-Now I've got you!  
-Hands off, wretch!  
-Take this!  
-Too close!  
-Back off, mutt!  
-Grrrah!  
-Time to feast, hounds!  
-Hounds! Dispose of these tresspassers!  
-Gah! Hounds! Get them!  
-Now... DO IT AGAIN!!!  
+# Kree'arra dialogue  
+Skreeee!  
+Kraaaw!  
+
+# Commander Zilyana dialogue  
+All praise Saradomin!  
+Slay the evil ones!  
+Death to the enemies of the light!  
+Saradomin lend me strength!  
+Saradomin is with us!  
+Forward! Our allies are with us!  
+Good will always triumph!  
+May Saradomin be my sword!  
+In the name of Saradomin!  
+Attack! Find the Godsword!  
+
+# Vet'ion/Calvar'ion dialogue  
+I WILL SMITE YOU!  
+I'VE GOT YOU NOW!  
+STAND STILL, RAT!  
+YOU CAN'T ESCAPE!  
+FOR THE LORD!  
+YOU CALL THAT A WEAPON?!  
 DODGE THIS!  
 PERISH, FOOL!  
 YOU ARE POWERLESS TO ME!  
 TIME TO DIE, MORTAL!  
+DIE!  
+DIE, RODENT!  
+HOLD STILL SO I CAN SMITE YOU!  
+YOU'RE MINE NOW!  
+RAAARGH!  
+YOU ARE WEAK! YOU ARE FEEBLE!  
+I WILL CUT YOU DOWN!  
+I WILL END YOU!  
+NOW I'VE GOT YOU!  
+HANDS OFF, WRETCH!  
+GRRRAH!  
 FILTHY WHELPS!  
 YOU'RE NOT BLOCKING THIS ONE!  
 DEFEND YOURSELF!  
-Must I do everything around here?!  
-Fine! I'll deal with you myself!  
+TAKE THIS!  
+TOO CLOSE!  
+BACK OFF, MUTT!  
+TIME TO FEAST, HOUNDS!  
+HOUNDS! DISPOSE OF THESE TRESSPASSERS!  
+GAH! HOUNDS! GET THEM!  
+I'VE HAD ENOUGH OF THIS! HOUNDS!  
+HOUNDS! GET RID OF THESE INTERLOPERS!  
+GO FORTH, MY HOUNDS, AND DESTROY THEM!  
+MUST I DO EVERYTHING AROUND HERE?!  
 I'LL KILL YOU FOR KILLING MY PETS!  
+FINE! I'LL DEAL WITH YOU MYSELF!  
+MY HOUNDS! I'LL MAKE YOU PAY FOR THAT!  
+Now... DO IT AGAIN!!!  
 Urgh... not... again...  
 Urk! I... failed...  
 I'll... be... back...  
@@ -85,11 +105,11 @@ This isn't... the last... of me...
 My lord... I'm... sorry...  
 I'll get you... next... time...  
 
-# Barrows Brothers dialogue :  
+# Barrows Brothers dialogue  
 You dare disturb my rest!  
 You dare steal from us!  
 
-# Verzik Vitur dialogue :  
+# Verzik Vitur dialogue  
 Oh I'm going to enjoy this...  
 You think you can defeat me?  
 There's nothing under there for you!  
@@ -98,7 +118,7 @@ I'm not finished with you just yet!
 You think this is over?  
 (Death Noise)  
 
-# Sol Heredit dialogue :  
+# Sol Heredit dialogue  
 Let's start by testing your footwork.  
 Not bad. Let's try something else...  
 Impressive. Let's see how you handle this...  
@@ -122,11 +142,15 @@ Your light shines no longer.
 Maybe next time...  
 Pathetic, really...  
 
-# Cut Content
-I had voiced the Sol Heredit chatbox dialogue you get before your 1st Colosseum kc,  
-plus the lines of dialogue Minimus shouts when you start a Colosseum run,  
-as well as Verzik's greeting text (preceeding her "Oh I'm going to enjoy this" line),  
-and the greeting text of the 2 Vyre Orators at the entrance of the Theatre of Blood.  
-But, due to the 10mb limit of Runelite plugins, I had to cut out some things.  
-If I wish to expand the plugin to cover more bosses in the future,  
-I'll probably need to have the voice files downloaded at execution time.  
+# A note regarding sound quality  
+Due to Runelite plugins having a maximum size of 10 megabytes,  
+I had to save the sound files in a rather low amount of kilohertz.  
+16000 Hz sound files ended up busting the limit,  
+and 8000 Hz sound files sounded a little too bad,  
+so 11025 Hz sound files was the best compromise available,  
+though I apologize if it doesn't sound too great on your machines.  
+In the future, I might adapt the logic to host the files externally,  
+and thus download them at execution time (like the C Engineer plugin does).  
+This definitely will be needed if I add any more bosses,  
+as I am extremely close to the 10mb limit as it is!  
+We shall see.  

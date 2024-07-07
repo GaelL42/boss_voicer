@@ -60,7 +60,6 @@ public class BossVoicerPlugin extends Plugin {
 	}
 
 	// Chatbox Dialogue Logic
-	// (currently only for Verzik's "Oh I'm going to enjoy this" due to cut content)
 	@Subscribe(priority=-100)
 	private void onWidgetLoaded(WidgetLoaded event) {
 		if (event.getGroupId() == InterfaceID.DIALOG_NPC) {
@@ -72,7 +71,8 @@ public class BossVoicerPlugin extends Plugin {
 					return;
 				}
 				String npcName = npcNameWidget.getText();
-				if ((npcName.equals("Verzik Vitur") && config.includeVerzik())) {
+				if ((npcName.equals("Verzik Vitur") && config.includeVerzik())
+						|| (npcName.equals("Sol Heredit") && config.includeSol())) {
 					Widget textWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
 					if (textWidget == null || textWidget.getText() == null) {
 						log.error("NPC dialog textWidget or textWidget.getText() is null");
@@ -96,6 +96,8 @@ public class BossVoicerPlugin extends Plugin {
 			String actorName = event.getActor().getName();
 			if ((actorName.equals("General Graardor") && config.includeGraardor())
 					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
+					|| (actorName.equals("Kree'arra") && config.includeKree())
+					|| (actorName.equals("Commander Zilyana") && config.includeZily())
 					|| (actorName.equals("Vet'ion") && config.includeVetion())
 					|| (actorName.equals("Calvar'ion") && config.includeVetion())
 					|| (actorName.equals("Sol Heredit") && config.includeSol())
@@ -132,14 +134,13 @@ public class BossVoicerPlugin extends Plugin {
 
 	// Death Sounds Logic, for bosses whose deaths feel a little bit lacking!
 	@Subscribe
-	public void onActorDeath(ActorDeath event) {
+	public void onAnimationChanged(AnimationChanged event) {
 		if (event != null && event.getActor() != null && event.getActor().getName() != null) {
 			String actorName = event.getActor().getName();
-			int actorLevel = event.getActor().getCombatLevel();
-			if ((actorName.equals("General Graardor") && config.includeGraardor())
-					|| (actorName.equals("K'ril Tsutsaroth") && config.includeKril())
-					|| (actorName.equals("Verzik Vitur") && config.includeVerzik()) &&
-							(actorLevel == 512 || actorLevel == 1520)) { // to avoid a P2 death sound
+			int animationID = event.getActor().getAnimation();
+			if ((actorName.equals("General Graardor") && animationID == 7020 && config.includeGraardor())
+					|| (actorName.equals("K'ril Tsutsaroth") && animationID == 6949 && config.includeKril())
+					|| (actorName.equals("Verzik Vitur") && animationID == 8128 && config.includeVerzik())) {
 				log.debug("About to try to play a sound from a death");
 				VoiceActing voiceAct = VoiceActing.forTriggerLine(actorName + " Death");
 				if (voiceAct != null) {
@@ -200,7 +201,7 @@ public class BossVoicerPlugin extends Plugin {
 
 	// Voice Playing Logic
 	private void playVoiceAct(String actorName, VoiceActing voiceAct) {
-		if (previousClip != null && previousClip.isRunning())
+		if (previousClip != null && previousClip.isRunning() && !config.allowMultipleVoices())
 			previousClip.stop();
 		Clip clip = voiceActingClips.get(voiceAct);
 		if (clip == null) {
