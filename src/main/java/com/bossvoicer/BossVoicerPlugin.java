@@ -50,9 +50,8 @@ public class BossVoicerPlugin extends Plugin {
 	}
 	@Override
 	protected void shutDown() throws Exception {
-		if (previousClip != null && previousClip.isRunning())
-			previousClip.stop();
 		unloadVoiceActs();
+		log.info("Boss Voicer stopped.");
 	}
 	@Provides
 	BossVoicerConfig provideConfig(ConfigManager configManager) {
